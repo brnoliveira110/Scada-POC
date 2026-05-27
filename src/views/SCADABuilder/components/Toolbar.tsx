@@ -38,6 +38,8 @@ export const Toolbar: React.FC<ToolbarProps> = ({
   loadPaperFactoryTemplate,
   loadShoppingMallTemplate,
   clearCanvas,
+  handleSavePlant,
+  handleLoadSavedPlant,
   showSavedToast
 }) => {
   const diagrams = useSCADAStore(state => state.diagrams)
@@ -158,6 +160,10 @@ export const Toolbar: React.FC<ToolbarProps> = ({
         <span className="text-gray-500 ml-2">TEMPLATES:</span>
         <button onClick={loadPaperFactoryTemplate} className="px-2 py-1.5 rounded bg-blue-950/20 border border-blue-500/25 text-blue-400 text-[11px] cursor-pointer">Papel</button>
         <button onClick={loadShoppingMallTemplate} className="px-2 py-1.5 rounded bg-purple-950/20 border border-purple-500/25 text-purple-400 text-[11px] cursor-pointer">Shopping</button>
+
+        <span className="text-gray-500 ml-2">AÇÕES:</span>
+        <button onClick={handleSavePlant} className="px-2 py-1.5 rounded bg-emerald-950/20 border border-emerald-500/25 text-emerald-400 hover:text-emerald-300 hover:bg-emerald-950/45 text-[11px] font-bold cursor-pointer transition-all">Salvar</button>
+        <button onClick={handleLoadSavedPlant} className="px-2 py-1.5 rounded bg-amber-950/20 border border-amber-500/25 text-amber-400 hover:text-amber-300 hover:bg-amber-950/45 text-[11px] font-bold cursor-pointer transition-all">Carregar</button>
 
       </div>
 
